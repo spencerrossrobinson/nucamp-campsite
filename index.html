@@ -29,8 +29,7 @@
           <h2>a better way to camp</h2>
         </div>
         <div class="col-md-4 col-xl-2 mt-4">
-          <a href="#reserveForm" class="btn btn-info btn-lg" data-html="true" data-placement="bottom"
-            data-toggle="tooltip" title="Or call us at <br/><strong>1-206-555-1234</strong>">Reserve
+          <a type="button" data-toggle="modal" data-target="#reserveCamp" class="btn btn-info btn-lg">Reserve
             Campsite</a>
         </div>
       </div>
@@ -71,6 +70,61 @@
       </div>
     </div>
   </nav>
+  <div id="reserveCamp" class="modal fade" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-info">
+          <h3 class="modal-title text-light">Reserve Campsite</h3>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <form action="">
+              <div class="form-group row align-items-center">
+                <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
+                <div class="col-sm-6">
+                  <select class="form-control" name="numCampers" id="numCampers">
+                    <option value="" disabled selected>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group row align-items-center">
+                <div class="col-sm-6 col-form-label">
+                  <label for="date">Date</label>
+                </div>
+                <div class="col-sm-6">
+                  <input class="form-control" type="date" id="date" name="date" />
+                </div>
+              </div>
+              <div class="form-group row">
+                <label class="col-form-label col-sm-6" for="">Campsite Type</label>
+                <div class="col-2 btn-group btn-group-toggle" data-toggle="buttons">
+                  <label class="btn btn-success active">
+                    <input type="radio" name="siteType" id="siteTent" autocomplete="off" checked>Tent
+                  </label>
+                  <label class="btn btn-primary">
+                    <input type="radio" name="siteType" id="siteRV" autocomplete="off">RV
+                  </label>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col">
+                  <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                  <button type="submit" class="btn btn-primary btn-sm ml-1">Search</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="loginModal" class="modal fade" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -205,46 +259,6 @@
               Bootstrap Outfitters supplies you with gear you need at prices
               you can't beat.
             </p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row row-content">
-      <div class="col-sm-6 mx-auto">
-        <div class="card">
-          <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
-          <div class="card-body">
-            <form action="#" id="reserveForm">
-              <div class="form-group row align-items-center">
-                <label class="col-sm-6 col-form-label" for="numCampers">Number of Campers</label>
-                <div class="col-sm-6">
-                  <select class="form-control" name="numCampers" id="numCampers">
-                    <option value="" disabled selected>Select...</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-group row align-items-center">
-                <div class="col-sm-6 col-form-label">
-                  <label for="date">Date</label>
-                </div>
-                <div class="col-sm-6">
-                  <input class="form-control" type="date" id="date" name="date" />
-                </div>
-              </div>
-              <div class="row">
-                <div class="col">
-                  <button type="submit" class="btn btn-primary">
-                    Search
-                  </button>
-                </div>
-              </div>
-            </form>
           </div>
         </div>
       </div>
